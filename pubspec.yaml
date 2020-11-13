@@ -1,0 +1,26 @@
+name: flutter_root_detection
+description: A Flutter plugin for detecting root on Android and jailbreak on iOS.
+version: 0.0.1
+author: Alann Maulana <maulana@cubeacon.com>
+homepage: https://github.com/eyro-labs/flutter_root_detection
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.20.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: id.co.eyro.flutter_root_detection
+        pluginClass: FlutterRootDetectionPlugin
+      ios:
+        pluginClass: FlutterRootDetectionPlugin
