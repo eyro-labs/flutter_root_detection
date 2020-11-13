@@ -16,7 +16,7 @@ class FlutterRootDetection {
     final rooted = await _channel.invokeMethod('rooted');
     bool isRooted = rooted == true || rooted == 1;
 
-    if (throwWhenRooted == true && !isRooted) {
+    if (throwWhenRooted == true && isRooted) {
       throw FlutterRootDetectionException();
     }
 
