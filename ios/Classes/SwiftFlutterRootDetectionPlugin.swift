@@ -12,8 +12,7 @@ public class SwiftFlutterRootDetectionPlugin: NSObject, FlutterPlugin {
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     switch call.method {
     case "rooted":
-        let isJailBroken = DTTJailbreakDetection.isJailbroken()
-        result(isJailBroken)
+        result(Jbdn.ijb())
         break
     case "developerMode":
         result(false)
